@@ -1,0 +1,59 @@
+@import "src/scss/globals";
+
+.projects {
+  display: flex;
+  justify-content: center;
+  padding: 100px 200px; /* Increase horizontal padding for larger screens */
+  max-width: 1600px; /* Increase max width to match other sections */
+  margin: 0 auto; /* Center the content */
+  
+  @include thirteen {
+    padding: 100px 180px;
+  }
+  @include desktop {
+    padding: 70px 150px;
+  }
+  @include tablet {
+    display: block;
+    padding: 60px 100px; /* Adjust padding for tablets */
+  }
+  @include mobile {
+    padding: 50px 40px; /* Adjust padding for mobile */
+  }
+
+  .project {
+    max-width: 1000px; /* Increase max width for content */
+    margin-bottom: 50px;
+
+    &__name {
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem; /* Adjust font size for consistency */
+      margin-bottom: 20px;
+      line-height: 1.6; /* Increase line height for readability */
+    }
+
+    &__used {
+      margin-top: 20px;
+      
+      &__item {
+        display: inline-block;
+        margin: 3px 3px 3px 0;
+        font-family: 'Inconsolata', monospace;
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 2px 7px;
+        border-radius: 3px;
+        color: $blue;
+        border: 1px solid $blue;
+        background: transparent;
+        
+        &:first-of-type {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 @import "globals";
+
 html {
   box-sizing: border-box;
 }
@@ -94,47 +95,57 @@ strong {
   background-position: center;
 }
 
+/* Adjusting section padding for wider content */
 .section {
   display: flex;
   justify-content: center;
-  padding: 100px 170px;
+  padding: 100px 200px; /* Increase horizontal padding */
+  max-width: 1600px; /* Increase max width for more space */
+  margin: 0 auto; /* Center the content */
+  
   @include thirteen {
-    padding: 100px;
+    padding: 100px 180px;
   }
   @include desktop {
-    padding: 50px;
+    padding: 70px 150px;
   }
   @include tablet {
     display: block;
+    padding: 60px 100px; /* Wider text for tablet view */
   }
   @include mobile {
-    padding: 50px 35px;
+    padding: 50px 40px; /* Allow more width for mobile */
   }
+
   &__title {
     flex-shrink: 0;
-    width: 200px;
-    margin-right: 70px;
+    width: 250px; /* Increase the title width for balance */
+    margin-right: 100px;
     color: $blue;
     text-transform: uppercase;
     text-align: right;
     font-weight: 700;
     letter-spacing: 2px;
+
     @include desktop {
-      margin-right: 50px;
+      margin-right: 80px;
     }
     @include little-desktop {
-      width: 150px;
+      width: 200px;
     }
     @include tablet {
       text-align: left;
       width: auto;
     }
   }
+
   &__content {
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.2rem; /* Slightly increase the font size */
     width: 100%;
-    max-width: 650px;
+    max-width: 1000px; /* Increase max content width */
+    line-height: 1.7; /* Improve readability with more line height */
+
     @include tablet {
       padding-top: 30px;
       padding-left: 50px;
@@ -142,10 +153,12 @@ strong {
     @include mobile {
       padding-left: 30px;
     }
+
     p {
       margin-top: 0;
       margin-bottom: 25px;
     }
+
     .underline-link {
       position: relative;
       display: inline-block;
@@ -174,12 +187,14 @@ strong {
   }
 }
 
+/* Adjusting link styles for consistency */
 .arrow-link {
   @include transition;
   font-weight: 700;
   display: inline-block;
   background-color: transparent;
   white-space: nowrap;
+  
   &:after {
     @include transition;
     position: relative;
@@ -193,6 +208,7 @@ strong {
     display: inline-block;
     vertical-align: middle;
   }
+
   &:hover:after {
     transform: translateX(7px);
   }
@@ -203,6 +219,7 @@ strong {
   font-size: 0.85rem;
   display: inline-block;
   margin-top: 15px;
+
   &:after {
     display: none;
   }
@@ -219,6 +236,7 @@ strong {
   right: 10px;
   cursor: pointer;
   display: none;
+  
   @include desktop {
     bottom: 20px;
     right: 7px;
@@ -233,6 +251,7 @@ strong {
   &:focus {
     transform: translateY(-10px);
   }
+
   img {
     width: 100%;
   }
