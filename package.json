@@ -3,7 +3,8 @@
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Ashrith Adepu <adepashrith@gmail.com>",
+  "homepage": "https://ashrithadepu.github.io",
   "dependencies": {
     "gatsby": "^5.13.1",
     "gatsby-plugin-sass": "^6.13.0",
