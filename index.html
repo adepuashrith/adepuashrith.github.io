@@ -1017,13 +1017,13 @@
         content="I'm Ashrith Adepu, a Mechanical Engineer with expertise in simulation, control systems, mechanical design, and data center infrastructure. Currently working with Amazon Web Services (AWS) in the data center industry, I contribute to the reliability and efficiency of critical HVAC and mechanical systems. I’ve optimized wind turbine performance and modeled EV powertrains, consistently pushing boundaries in efficiency and innovation." />
       <meta property="og:title" content="Ashrith Adepu" />
       <meta property="og:description"
-        content="Ashrith Adepu is a Mechanical Engineer with expertise in simulation, control systems, and mechanical design. He has optimized wind turbine performance and modeled EV powertrains, always aiming to push boundaries in efficiency and innovation." />
+        content="I'm Ashrith Adepu, a Mechanical Engineer with expertise in simulation, control systems, mechanical design, and data center infrastructure. Currently working with Amazon Web Services (AWS) in the data center industry, I contribute to the reliability and efficiency of critical HVAC and mechanical systems. I’ve optimized wind turbine performance and modeled EV powertrains, consistently pushing boundaries in efficiency and innovation." />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:creator" content="Ashrith Adepu" />
       <meta name="twitter:title" content="Ashrith Adepu" />
       <meta name="twitter:description"
-        content="Ashrith Adepu is a Mechanical Engineer with expertise in simulation, control systems, and mechanical design. He has optimized wind turbine performance and modeled EV powertrains, always aiming to push boundaries in efficiency and innovation." />
+        content="I'm Ashrith Adepu, a Mechanical Engineer with expertise in simulation, control systems, mechanical design, and data center infrastructure. Currently working with Amazon Web Services (AWS) in the data center industry, I contribute to the reliability and efficiency of critical HVAC and mechanical systems. I’ve optimized wind turbine performance and modeled EV powertrains, consistently pushing boundaries in efficiency and innovation." />
       <div class="switch-wrapper">
         <div class="sun"></div>
         <div class="toggle-wrapper"><input id="switch" type="checkbox" /><label for="switch" id="toggle">Toggle</label>
@@ -1305,5 +1305,30 @@
   </script>
   <script>window.___webpackCompilationHash = "ff4fa17f2242ed28f455";</script><!-- slice-end id="_gatsby-scripts-1" -->
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("switch");
+    const html = document.documentElement;
+    const body = document.body;
 
+    // Load saved theme
+    if (localStorage.getItem("theme") === "dark") {
+      html.classList.add("night");
+      body.classList.add("night");
+      toggle.checked = true;
+    }
+
+    toggle.addEventListener("change", function () {
+      if (toggle.checked) {
+        html.classList.add("night");
+        body.classList.add("night");
+        localStorage.setItem("theme", "dark");
+      } else {
+        html.classList.remove("night");
+        body.classList.remove("night");
+        localStorage.setItem("theme", "light");
+      }
+    });
+  });
+</script>
 </html>
